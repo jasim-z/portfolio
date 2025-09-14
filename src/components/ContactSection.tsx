@@ -36,17 +36,34 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        const errorData = await response.json();
+        console.error('Error sending email:', errorData.error);
+        alert('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
