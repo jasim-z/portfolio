@@ -18,13 +18,46 @@ import ContactSection from '@/components/ContactSection';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    
+    // Use Intersection Observer for better section detection
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Trigger when section is 20% from top
+      threshold: 0
+    };
+    
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setActiveSection(sectionId);
+        }
+      });
+    };
+    
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    // Observe all sections
+    const sections = ['about', 'experience', 'skills', 'projects', 'contact'];
+    sections.forEach((sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -43,15 +76,26 @@ export default function Home() {
               JZ
             </div>
             <div className="hidden md:flex space-x-8">
-              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  {item}
-                </button>
-              ))}
+              {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => {
+                const sectionId = item.toLowerCase();
+                const isActive = activeSection === sectionId;
+                return (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(sectionId)}
+                    className={`relative transition-colors duration-200 ${
+                      isActive 
+                        ? 'text-white font-semibold' 
+                        : 'text-gray-300 hover:text-white'
+                    }`}
+                  >
+                    {item}
+                    {isActive && (
+                      <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -61,10 +105,14 @@ export default function Home() {
             <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
               <div className="max-w-6xl mx-auto text-center">
           <div className="space-y-8">
-            {/* Profile Image Placeholder */}
-            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-              <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
-                <span className="text-4xl font-bold text-white">JZ</span>
+            {/* Profile Image */}
+            <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-800 to-black-600 p-1">
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img 
+                  src="/my_photo.png" 
+                  alt="Jasim Zainudheen" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
@@ -78,7 +126,7 @@ export default function Home() {
               <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 Full Stack Software Engineer with 11 years of experience delivering scalable, 
                 secure web solutions using React.js, Next.js, Node.js, and NestJS. 
-                Passionate about clean architecture, testing, and leveraging AI tools for efficient development.
+                
               </p>
             </div>
 
@@ -101,7 +149,7 @@ export default function Home() {
             {/* Social Links */}
             <div className="flex justify-center space-x-6">
               <a
-                href="https://github.com/jasimlz"
+                href="https://github.com/jasim-z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors duration-200"

@@ -203,8 +203,8 @@ const ProjectsSection = () => {
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3">
+                {/* Action Buttons - Hidden for now */}
+                {/* <div className="flex gap-3">
                   <a
                     href={project.github}
                     target="_blank"
@@ -223,7 +223,7 @@ const ProjectsSection = () => {
                     <ExternalLink className="w-4 h-4" />
                     <span className="text-sm">Live Demo</span>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

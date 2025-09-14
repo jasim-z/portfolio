@@ -273,7 +273,7 @@ const ContactSection = () => {
         <div className="mt-20 text-center">
           <div className="border-t border-slate-700 pt-8">
             <p className="text-gray-400 mb-4 text-base">
-              © 2024 Jasim Zainudheen. All rights reserved.
+              © 2025 Jasim Zainudheen. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm">
               Built with Next.js, TypeScript, and Tailwind CSS
