@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Code, Database, Cloud, Shield, Zap, Users, Award, Coffee } from 'lucide-react';
 
 const AboutSection = () => {
@@ -94,7 +93,7 @@ const AboutSection = () => {
               Beyond <span className="gradient-text">Code</span>
             </h3>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
+              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, 
               or enjoying a good cup of coffee while planning the next big innovation. I believe in continuous learning 
               and staying updated with the latest trends in software development.
             </p>

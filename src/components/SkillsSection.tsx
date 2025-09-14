@@ -8,10 +8,7 @@ import {
   Shield, 
   Zap, 
   GitBranch, 
-  Container, 
-  Monitor,
-  Smartphone,
-  Globe
+  Monitor
 } from 'lucide-react';
 
 const SkillsSection = () => {

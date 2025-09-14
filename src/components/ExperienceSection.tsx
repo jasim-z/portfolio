@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Calendar, MapPin, ExternalLink, Code, Database, Cloud, Shield, Users } from 'lucide-react';
+import { Calendar, MapPin, Code, Database, Cloud, Shield, Users } from 'lucide-react';
 
 const ExperienceSection = () => {
   const experiences = [

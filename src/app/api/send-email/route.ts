@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
       },
       to: 'lzjasim@gmail.com', // Your Gmail address
       subject: `Portfolio Contact: ${subject}`,
-      priority: 'high',
+      priority: 'high' as const,
       headers: {
         'X-Priority': '1',
         'X-MSMail-Priority': 'High',

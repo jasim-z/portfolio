@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { 
   Mail, 
@@ -133,7 +132,7 @@ const ContactSection = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how we can work together to bring your ideas to life.
+            Ready to start your next project? Let&apos;s discuss how we can work together to bring your ideas to life.
           </p>
         </div>
 
@@ -195,7 +194,7 @@ const ContactSection = () => {
               <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h4 className="text-2xl font-bold text-white mb-2">Message Sent!</h4>
-                <p className="text-gray-400">Thank you for reaching out. I'll get back to you soon!</p>
+                <p className="text-gray-400">Thank you for reaching out. I&apos;ll get back to you soon!</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">

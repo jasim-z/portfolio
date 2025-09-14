@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Code, Database, Cloud, Shield, Users, Zap } from 'lucide-react';
+import { Code, Zap } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
@@ -234,8 +233,8 @@ const ProjectsSection = () => {
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 rounded-2xl">
             <h3 className="text-2xl font-bold text-white mb-4">Interested in Working Together?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              I'm always excited to work on new projects and collaborate with amazing people. 
-              Let's discuss how we can bring your ideas to life!
+              I&apos;m always excited to work on new projects and collaborate with amazing people. 
+              Let&apos;s discuss how we can bring your ideas to life!
             </p>
             <button className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105">
               <Zap className="w-5 h-5" />
