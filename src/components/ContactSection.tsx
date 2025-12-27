@@ -90,8 +90,8 @@ const ContactSection = () => {
     {
       icon: Github,
       title: 'GitHub',
-      value: 'github.com/jasimlz',
-      link: 'https://github.com/jasimlz',
+      value: 'github.com/jasim-z',
+      link: 'https://github.com/jasim-z',
       color: 'from-gray-500 to-gray-700'
     },
     {
@@ -290,9 +290,6 @@ const ContactSection = () => {
           <div className="border-t border-slate-700 pt-8">
             <p className="text-gray-400 mb-4 text-base">
               © 2025 Jasim Zainudheen. All rights reserved.
-            </p>
-            <p className="text-gray-500 text-sm">
-              Built with Next.js, TypeScript, and Tailwind CSS
             </p>
           </div>
         </div>

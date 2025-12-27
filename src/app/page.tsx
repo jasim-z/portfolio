@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <div className="hidden md:flex space-x-8">
               {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => {
-                const sectionId = item.toLowerCase();
+                const sectionId = item.toLowerCase().replace(/\s+/g, '-');
                 const isActive = activeSection === sectionId;
                 return (
                   <button
@@ -120,12 +120,10 @@ export default function Home() {
                 Jasim Zainudheen
               </h1>
               <p className="text-xl md:text-2xl text-purple-300 font-light">
-                Fullstack Software Engineer
+                Senior Software Engineer + AI-Augmented Product Builder
               </p>
               <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Full Stack Software Engineer with 11 years of experience delivering scalable, 
-                secure web solutions using React.js, Next.js, Node.js, and NestJS. 
-                
+                I design, build, and ship end-to-end web and mobile products with strong engineering fundamentals and AI-augmented workflows.
               </p>
             </div>
 

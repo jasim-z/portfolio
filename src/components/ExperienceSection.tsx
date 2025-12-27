@@ -5,19 +5,20 @@ import { Calendar, MapPin, Code, Database, Cloud, Shield, Users } from 'lucide-r
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: 'Freelance Full-Stack Engineer',
-      company: 'Self-Employed',
+      title: 'Independent Product Engineer',
+      company: 'Self-Directed Projects & Client Collaborations',
       location: 'Munich, Germany',
       period: 'NOV 2024 - PRESENT',
       icon: Code,
       color: 'from-purple-500 to-pink-500',
       responsibilities: [
-        'Build and deploy scalable web apps using React.js, Next.js, Node.js, Nest.js, and AWS',
-        'Manage state management with Redux, Zustand and React Context',
-        'Optimize database schemas and queries for Postgres (TypeORM)',
-        'Utilize GitHub Copilot and Cursor IDE to accelerate development and enhance productivity'
+        'Design, build, and ship end-to-end web and mobile applications for personal products and client projects',
+        'Act as Senior Software Engineer / Tech Lead, overseeing architecture, security, UX, and overall product quality',
+        'Use AI-assisted development workflows to accelerate delivery while maintaining production-level standards',
+        'Review and refine AI-generated code, ensuring scalability, maintainability, and best practices',
+        'Collaborate remotely with clients and stakeholders (including international projects)'
       ],
-      technologies: ['React.js', 'Next.js', 'Node.js', 'Nest.js', 'AWS', 'TypeORM', 'Redux', 'Zustand']
+      technologies: ['Next.js', 'NestJS', 'React Native', 'Expo', 'Supabase', 'PostgreSQL', 'AWS', 'Vercel', 'Cursor IDE', 'GitHub Copilot', 'GitHub Actions']
     },
     {
       title: 'Full-Stack Developer',
@@ -27,30 +28,28 @@ const ExperienceSection = () => {
       icon: Database,
       color: 'from-blue-500 to-cyan-500',
       responsibilities: [
-        'Implemented scalable Node.js application using event-driven architecture within a monorepo-based microservices setup in Nest.js',
+        'Implemented & maintained scalable Node.js application features in a microservices architecture using RabbitMQ in Nest.js',
         'Integrated JWT-based authentication and implemented RBAC and ABAC for authorization',
         'Designed and optimized UI features using React.js and TypeScript',
         'Designed, implemented, and maintained data models for SQL (using Sequelize ORM) and NoSQL databases',
         'Implemented security best practices to prevent XSS, CSRF, and SQL injection',
-        'Wrote and maintained unit and integration tests using Jest and React Testing Library',
-        'Containerized applications using Docker and automated deployment pipelines with GitHub Actions CI/CD'
       ],
-      technologies: ['Node.js', 'Nest.js', 'React.js', 'TypeScript', 'JWT', 'RBAC', 'ABAC', 'Sequelize', 'Docker', 'GitHub Actions']
+      technologies: ['Node.js', 'Nest.js', 'React.js', 'TypeScript', 'ORM', 'RabbitMQ', 'JWT', 'RBAC', 'ABAC', 'Docker']
     },
     {
-      title: 'React Developer',
+      title: 'React Developer & Founding Engineer',
       company: 'PicMe Inc',
       location: 'India',
       period: 'MAY 2017 - APR 2021',
       icon: Cloud,
       color: 'from-green-500 to-emerald-500',
       responsibilities: [
-        'Led a team of 4 developers to build a React.js web application',
+        'Led a team of 4 developers to build a React web & mobile application',
         'Integrated AWS Rekognition, FindFace, and Azure Face APIs',
         'Designed and maintained scalable cloud infrastructure using AWS',
         'Deployed and showcased the app at events with real-time participants'
       ],
-      technologies: ['React.js', 'AWS', 'AWS Rekognition', 'Azure Face API', 'Cloud Infrastructure']
+      technologies: ['React.js', 'React Native', 'Expo', 'AWS', 'Face recognition APIs']
     },
     {
       title: 'Web Developer',
@@ -62,7 +61,7 @@ const ExperienceSection = () => {
       responsibilities: [
         'Designed and developed web applications using PHP in MVC pattern'
       ],
-      technologies: ['PHP', 'MVC', 'MySQL', 'JavaScript', 'HTML', 'CSS']
+      technologies: ['PHP', 'MVC', 'MySQL', 'JavaScript', 'jQuery', 'HTML', 'CSS']
     }
   ];
 
@@ -159,31 +158,7 @@ const ExperienceSection = () => {
           </div>
         </div>
 
-        {/* Education */}
-        <div className="mt-20">
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 rounded-2xl">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white">Education</h3>
-                <p className="text-gray-400">Academic Foundation</p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Bachelor of Technology in Information Technology</h4>
-                <p className="text-purple-400 font-semibold mb-1">University of Calicut</p>
-                <p className="text-gray-400">2008 - 2012</p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-2">Languages</h4>
-                <p className="text-gray-400">English (Fluent)</p>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

@@ -1,9 +1,60 @@
 'use client';
 
-import { Code, Zap } from 'lucide-react';
+import { Code } from 'lucide-react';
 
 const ProjectsSection = () => {
   const projects = [
+    {
+      title: '5MinutesMe',
+      description: 'A mobile habit and productivity app designed to help users to kickstart activities. Track habits using timers, monitor progress and achievements, maintain streaks, personalized inner voice guidance for each habit, and AI-powered summaries.',
+      image: '/api/placeholder/600/400',
+      technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'OpenAI'],
+      features: [
+        'Mobile-first habit tracking and productivity features',
+        'Built with AI-assisted development (Cursor IDE)',
+        'Cross-platform mobile application',
+        'TypeScript for type safety',
+        'Expo for rapid development and deployment'
+      ],
+      role: 'Product Owner, Tech Lead',
+      status: 'Completed',
+      category: 'Mobile',
+      url: 'https://play.google.com/store/apps/details?id=com.fiveminutesme.app'
+    },
+    {
+      title: 'TwinSouls',
+      description: 'An e-commerce platform for crafts, art, and personalized gifting. Features include coupon system for discounts, comprehensive dashboard for product management, and seamless shopping experience for customers.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Next.js', 'Tailwind CSS', 'Shadcn/UI', 'Supabase', 'Vercel'],
+      features: [
+        'Clean, modern UI design',
+        'Optimized for performance and scalability',
+        'Responsive e-commerce experience',
+        'Next.js for server-side rendering',
+        'Tailwind CSS for rapid styling'
+      ],
+      role: 'Frontend Engineer, Product Builder',
+      status: 'In Progress',
+      category: 'E-commerce',
+      url: 'https://twinsouls-web.vercel.app/'
+    },
+    {
+      title: 'KinderCheers',
+      description: 'A child development support platform for parents, featuring a full-stack web application with comprehensive admin dashboard. Built with modern web technologies and deployed on Vercel for optimal performance.',
+      image: '/api/placeholder/600/400',
+      technologies: ['Next.js', 'Tailwind CSS', 'Supabase', 'Vercel'],
+      features: [
+        'Full-stack web application with admin dashboard',
+        'Parent-focused child development tools',
+        'Supabase for backend and database',
+        'Responsive design with Tailwind CSS',
+        'Production deployment on Vercel'
+      ],
+      role: 'Product Architect, Full-Stack Engineer',
+      status: 'Completed',
+      category: 'Web',
+      url: 'https://kindercheers.com/'
+    },
     {
       title: 'Healthcare Management Platform',
       description: 'A comprehensive healthcare management system built with microservices architecture, featuring real-time patient monitoring, appointment scheduling, and secure data management.',
@@ -16,16 +67,15 @@ const ProjectsSection = () => {
         'Comprehensive testing with Jest and RTL',
         'Docker containerization and CI/CD pipeline'
       ],
-      github: 'https://github.com/jasimlz/healthcare-platform',
-      live: 'https://healthcare-platform-demo.vercel.app',
+      role: 'Fullstack Developer at OnCare',
       status: 'Completed',
       category: 'Full-Stack'
     },
     {
       title: 'AI-Powered Face Recognition System',
-      description: 'Advanced face recognition application integrating multiple AI services including AWS Rekognition, Azure Face API, and custom machine learning models for real-time identification.',
+      description: 'A face recognition platform for public events where guests register to receive photos automatically delivered via face recognition. Uses AWS Rekognition, Azure Face API, and FindFace API with PicMe and FotoMe mobile apps for guests and a dashboard for hosts.',
       image: '/api/placeholder/600/400',
-      technologies: ['React.js', 'Node.js', 'AWS Rekognition', 'Azure Face API', 'MongoDB', 'Express', 'WebRTC'],
+      technologies: ['React.js', 'React Native', 'PHP Slim 3', 'AWS', 'Face Recognition APIs'],
       features: [
         'Real-time face detection and recognition',
         'Multi-cloud AI service integration',
@@ -33,14 +83,13 @@ const ProjectsSection = () => {
         'Scalable cloud infrastructure on AWS',
         'Event-driven real-time updates'
       ],
-      github: 'https://github.com/jasimlz/face-recognition-app',
-      live: 'https://face-recognition-demo.vercel.app',
+      role: 'React Developer, Founding Engineer at PicMe',
       status: 'Completed',
-      category: 'AI/ML'
+      category: 'Event Tech'
     },
     {
       title: 'E-commerce Microservices Platform',
-      description: 'A scalable e-commerce platform built with microservices architecture, featuring product catalog, user management, payment processing, and order tracking.',
+      description: 'A scalable e-commerce platform for flea markets and multi-vendor marketplaces, built with microservices architecture. Features product catalog, user management, payment processing, and order tracking.',
       image: '/api/placeholder/600/400',
       technologies: ['React.js', 'Next.js', 'Node.js', 'Nest.js', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker'],
       features: [
@@ -50,65 +99,11 @@ const ProjectsSection = () => {
         'Comprehensive API documentation',
         'Automated testing and deployment'
       ],
-      github: 'https://github.com/jasimlz/ecommerce-microservices',
-      live: 'https://ecommerce-demo.vercel.app',
+      role: 'Product Architect, Full-Stack Engineer',
       status: 'In Progress',
       category: 'E-commerce'
-    },
-    {
-      title: 'Developer Portfolio Website',
-      description: 'Modern, responsive portfolio website showcasing skills, projects, and experience with smooth animations and interactive elements.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
-      features: [
-        'Responsive design for all devices',
-        'Smooth animations and transitions',
-        'Dark theme with gradient accents',
-        'SEO optimized with Next.js',
-        'Fast loading with optimized images'
-      ],
-      github: 'https://github.com/jasimlz/portfolio',
-      live: 'https://jasim-portfolio.vercel.app',
-      status: 'Completed',
-      category: 'Portfolio'
-    },
-    {
-      title: 'Real-time Chat Application',
-      description: 'A real-time messaging application with group chat, file sharing, and video calling capabilities built with modern web technologies.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React.js', 'Node.js', 'Socket.io', 'MongoDB', 'Express', 'WebRTC', 'JWT'],
-      features: [
-        'Real-time messaging with Socket.io',
-        'Group chat and private messaging',
-        'File sharing and media support',
-        'Video calling with WebRTC',
-        'Message encryption and security'
-      ],
-      github: 'https://github.com/jasimlz/chat-app',
-      live: 'https://chat-app-demo.vercel.app',
-      status: 'Completed',
-      category: 'Real-time'
-    },
-    {
-      title: 'Task Management Dashboard',
-      description: 'A comprehensive task management system with project tracking, team collaboration, and analytics dashboard for productivity insights.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React.js', 'Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
-      features: [
-        'Project and task management',
-        'Team collaboration tools',
-        'Analytics and reporting dashboard',
-        'Drag-and-drop task organization',
-        'Real-time updates and notifications'
-      ],
-      github: 'https://github.com/jasimlz/task-manager',
-      live: 'https://task-manager-demo.vercel.app',
-      status: 'Completed',
-      category: 'Productivity'
     }
   ];
-
-  const categories = ['All', 'Full-Stack', 'AI/ML', 'E-commerce', 'Portfolio', 'Real-time', 'Productivity'];
 
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
@@ -122,25 +117,27 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        {/* Project Categories Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 px-4">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className="px-6 py-2 rounded-full bg-slate-700 text-gray-300 hover:bg-purple-500 hover:text-white transition-all duration-300"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 px-4">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-slate-900 rounded-2xl overflow-hidden hover:bg-slate-700 transition-all duration-300 group"
-            >
+          {projects.map((project, index) => {
+            const CardWrapper = project.url ? 'a' : 'div';
+            const wrapperProps = project.url
+              ? {
+                  href: project.url,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                  className: 'bg-slate-900 rounded-2xl overflow-hidden hover:bg-slate-700 transition-all duration-300 group cursor-pointer block'
+                }
+              : {
+                  className: 'bg-slate-900 rounded-2xl overflow-hidden hover:bg-slate-700 transition-all duration-300 group'
+                };
+            
+            return (
+              <CardWrapper
+                key={index}
+                {...wrapperProps}
+              >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-purple-500 to-pink-500 overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -170,23 +167,19 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
 
-                {/* Key Features */}
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {project.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-xs text-gray-400 flex items-start gap-2">
-                        <span className="text-purple-400 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {/* Role */}
+                {project.role && (
+                  <div className="mb-4">
+                    <span className="text-xs font-semibold text-purple-300">Role: </span>
+                    <span className="text-xs text-gray-300">{project.role}</span>
+                  </div>
+                )}
 
                 {/* Technologies */}
                 <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 4).map((tech, idx) => (
+                    {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
                         className="px-2 py-1 bg-slate-800 text-purple-300 text-xs rounded-full"
@@ -194,11 +187,6 @@ const ProjectsSection = () => {
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 4 && (
-                      <span className="px-2 py-1 bg-slate-800 text-gray-400 text-xs rounded-full">
-                        +{project.technologies.length - 4} more
-                      </span>
-                    )}
                   </div>
                 </div>
 
@@ -224,24 +212,11 @@ const ProjectsSection = () => {
                   </a>
                 </div> */}
               </div>
-            </div>
-          ))}
+            </CardWrapper>
+            );
+          })}
         </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-white mb-4">Interested in Working Together?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              I&apos;m always excited to work on new projects and collaborate with amazing people. 
-              Let&apos;s discuss how we can bring your ideas to life!
-            </p>
-            <button className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105">
-              <Zap className="w-5 h-5" />
-              Start a Project
-            </button>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

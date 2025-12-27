@@ -20,13 +20,14 @@ const SkillsSection = () => {
       skills: [
         { name: 'React.js', level: 95, color: 'bg-blue-500' },
         { name: 'Next.js', level: 90, color: 'bg-black' },
+        { name: 'React Native', level: 88, color: 'bg-blue-400' },
+        { name: 'Expo', level: 85, color: 'bg-gray-700' },
         { name: 'TypeScript', level: 92, color: 'bg-blue-600' },
         { name: 'JavaScript', level: 95, color: 'bg-yellow-500' },
         { name: 'Tailwind CSS', level: 88, color: 'bg-cyan-500' },
-        { name: 'React Native', level: 85, color: 'bg-blue-400' },
-        { name: 'Webpack', level: 80, color: 'bg-blue-700' },
         { name: 'Jest', level: 85, color: 'bg-red-500' },
-        { name: 'RTL', level: 82, color: 'bg-pink-500' }
+        { name: 'RTL', level: 82, color: 'bg-pink-500' },
+        { name: 'Playwright', level: 85, color: 'bg-green-600' }
       ]
     },
     {
@@ -50,11 +51,10 @@ const SkillsSection = () => {
       color: 'from-orange-500 to-red-500',
       skills: [
         { name: 'PostgreSQL', level: 92, color: 'bg-blue-700' },
+        { name: 'Supabase', level: 88, color: 'bg-green-500' },
         { name: 'MySQL', level: 90, color: 'bg-orange-600' },
         { name: 'MongoDB', level: 88, color: 'bg-green-600' },
-        { name: 'Redis', level: 85, color: 'bg-red-500' },
-        { name: 'ElasticSearch', level: 80, color: 'bg-yellow-600' },
-        { name: 'Kibana', level: 75, color: 'bg-blue-500' }
+        { name: 'Redis', level: 85, color: 'bg-red-500' }
       ]
     },
     {
@@ -68,31 +68,37 @@ const SkillsSection = () => {
         { name: 'Vercel', level: 88, color: 'bg-black' },
         { name: 'Microservices', level: 85, color: 'bg-green-500' },
         { name: 'RabbitMQ', level: 80, color: 'bg-orange-600' },
-        { name: 'Sentry', level: 82, color: 'bg-purple-600' }
+        { name: 'Sentry', level: 82, color: 'bg-purple-600' },
+        { name: 'Prometheus', level: 80, color: 'bg-red-600' },
+        { name: 'Grafana', level: 82, color: 'bg-orange-500' },
+        { name: 'Google Play Console', level: 85, color: 'bg-green-500' },
+        { name: 'Apple Connect', level: 85, color: 'bg-gray-600' }
       ]
     },
     {
-      title: 'Tools & Others',
+      title: 'AI-Assisted Development & Tools',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
       skills: [
+        { name: 'Cursor IDE', level: 92, color: 'bg-purple-500' },
+        { name: 'AI-Assisted Development', level: 90, color: 'bg-purple-600' },
         { name: 'Git', level: 95, color: 'bg-orange-600' },
         { name: 'GitHub', level: 92, color: 'bg-gray-800' },
+        { name: 'Copilot', level: 88, color: 'bg-gray-700' },
         { name: 'Jira', level: 88, color: 'bg-blue-600' },
-        { name: 'Confluence', level: 85, color: 'bg-blue-500' },
-        { name: 'Copilot', level: 90, color: 'bg-gray-700' },
-        { name: 'Cursor IDE', level: 88, color: 'bg-purple-500' },
-        { name: 'Supabase', level: 80, color: 'bg-green-500' }
+        { name: 'Confluence', level: 85, color: 'bg-blue-500' }
       ]
     }
   ];
 
   const technologies = [
-    'React.js', 'Next.js', 'Node.js', 'Nest.js', 'TypeScript', 'JavaScript',
-    'PostgreSQL', 'MongoDB', 'Redis', 'AWS', 'Docker', 'GitHub Actions',
+    'React.js', 'Next.js', 'React Native', 'Expo', 'Node.js', 'Nest.js', 'TypeScript', 'JavaScript',
+    'PostgreSQL', 'Supabase', 'MongoDB', 'Redis', 'AWS', 'Docker', 'GitHub Actions',
     'Tailwind CSS', 'TypeORM', 'Sequelize', 'JWT', 'RBAC', 'ABAC',
-    'Express', 'React Native', 'ElasticSearch', 'RabbitMQ', 'Vercel',
-    'Jest', 'RTL', 'Webpack', 'Sentry', 'Supabase', 'Kibana'
+    'Express', 'RabbitMQ', 'Vercel',
+    'Jest', 'RTL', 'Playwright', 'Webpack', 'Sentry',
+    'Prometheus', 'Grafana', 'Google Play Console', 'Apple Connect',
+    'AI-Assisted Development', 'Cursor IDE'
   ];
 
   return (
@@ -146,40 +152,7 @@ const SkillsSection = () => {
             </div>
           ))}
         </div>
-
-        {/* Technology Cloud */}
-        <div className="text-center px-4">
-          <h3 className="text-2xl font-bold text-white mb-8">Technology Stack</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-6xl mx-auto">
-            {technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-slate-800 text-gray-300 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 cursor-default hover:scale-105"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications & Achievements */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6 rounded-xl text-center">
-            <Shield className="w-8 h-8 text-green-400 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-white mb-2">Security Focused</h4>
-            <p className="text-gray-400 text-sm">Implementing best practices for XSS, CSRF, and SQL injection prevention</p>
-          </div>
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6 rounded-xl text-center">
-            <GitBranch className="w-8 h-8 text-blue-400 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-white mb-2">CI/CD Expert</h4>
-            <p className="text-gray-400 text-sm">Automated deployment pipelines with GitHub Actions and Docker</p>
-          </div>
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6 rounded-xl text-center">
-            <Zap className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-            <h4 className="text-lg font-semibold text-white mb-2">AI-Enhanced</h4>
-            <p className="text-gray-400 text-sm">Leveraging Copilot and Cursor IDE for efficient development</p>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

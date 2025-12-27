@@ -1,6 +1,6 @@
 'use client';
 
-import { Code, Database, Cloud, Shield, Zap, Users, Award, Coffee } from 'lucide-react';
+import { Code, Database, Cloud, Shield, Zap, Users, Award } from 'lucide-react';
 
 const AboutSection = () => {
   const stats = [
@@ -13,33 +13,33 @@ const AboutSection = () => {
   const highlights = [
     {
       icon: Code,
-      title: 'Full-Stack Development',
-      description: 'Expert in React.js, Next.js, Node.js, and NestJS for building scalable web applications.'
-    },
-    {
-      icon: Database,
-      title: 'Database Expertise',
-      description: 'Proficient in both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) database design and optimization.'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Experienced in AWS, Docker, CI/CD pipelines, and microservices architecture deployment.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Testing',
-      description: 'Implementing security best practices, JWT authentication, RBAC, and comprehensive testing strategies.'
+      title: 'End-to-End Product Building',
+      description: 'Build, ship, and scale complete web and mobile applications from concept to production. Expert in React.js, Next.js, React Native, and full-stack architecture.'
     },
     {
       icon: Zap,
-      title: 'AI-Enhanced Development',
-      description: 'Leveraging GitHub Copilot and Cursor IDE to accelerate development and improve code quality.'
+      title: 'AI-Augmented Development',
+      description: 'Use Cursor IDE and AI tools as force multipliers, guided by 11+ years of engineering experience. Review and refine AI-generated code for architecture, security, and performance.'
     },
     {
       icon: Users,
-      title: 'Team Leadership',
-      description: 'Led teams of 4+ developers, mentored junior developers, and managed complex project deliveries.'
+      title: 'Product & Tech Leadership',
+      description: 'Act as Senior Engineer and Product & Tech Lead, making architecture decisions, reviewing code, and guiding product direction with founder-friendly approach.'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Architecture',
+      description: 'Focus on production-ready code with strong security practices, scalable architecture, and comprehensive code review processes.'
+    },
+    {
+      icon: Database,
+      title: 'Modern Tech Stack',
+      description: 'Proficient in Next.js, React Native, Expo, Supabase, TypeScript, and cloud deployment. Build with performance and scalability in mind.'
+    },
+    {
+      icon: Cloud,
+      title: 'UX & Performance',
+      description: 'Prioritize user experience, clean UI design, and application performance. Ensure products are both functional and delightful to use.'
     }
   ];
 
@@ -51,8 +51,7 @@ const AboutSection = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Passionate about creating innovative solutions that make a difference. 
-            I combine technical expertise with creative problem-solving to deliver exceptional results.
+          I’m a senior software engineer with a strong product mindset, building and scaling end-to-end web and mobile applications. I use AI-assisted development tools as a force multiplier, applying 11+ years of engineering experience to guide architecture, security, UX, and code quality. My focus is on delivering production-ready products that scale reliably.
           </p>
         </div>
 
@@ -85,20 +84,6 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Personal Touch */}
-        <div className="mt-24 text-center px-4">
-          <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-8 rounded-2xl max-w-4xl mx-auto">
-            <Coffee className="w-12 h-12 text-purple-400 mx-auto mb-6" />
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Beyond <span className="gradient-text">Code</span>
-            </h3>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              When I&apos;m not coding, you&apos;ll find me exploring new technologies, contributing to open-source projects, 
-              or enjoying a good cup of coffee while planning the next big innovation. I believe in continuous learning 
-              and staying updated with the latest trends in software development.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
